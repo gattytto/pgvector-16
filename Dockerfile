@@ -5,5 +5,4 @@ RUN dnf install -y 'dnf-command(config-manager)' && \
     dnf install -y --nogpgcheck  pgvector_16 && \
     dnf clean all && rm -rf /var/cache/dnf && \
     mv /usr/pgsql-16/share/extension/* /usr/share/pgsql/extension/ && \
-    ls -alh /usr/pgsql-16/share/extension/
-
+    mv /usr/pgsql-16/lib/vector.so  /usr/lib64/pgsql/vector.so
